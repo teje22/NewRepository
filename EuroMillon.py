@@ -59,5 +59,21 @@ for l1 in listaNums:
                 cont+=1
 print("Los números que ha elegido se han borrado de su lista")
 
+# Volvemos a mostrar la lista de los números pero esta vez con las X añadidas
+for i in listaNums:
+    print(*i)
+                
+            
+print("Vamos a elegir ahora las estrellas")
+for i in listaEstrellas:
+    print(*i)
+
+while len(miBoletoAux)<2: #Le decimos que mientras la longitud de la lista "miBoletoAux" sea menor que 5 nos pida nos pida otro numero
+    boletoAux=int(input("Elija 2 estrellitas: ")) #Creamos variable para que guarde las estrellas
+    if boletoAux not in miBoletoAux and boletoAux >=1 and boletoAux <=12: #Le ponemos las condiciones igual que anteriormente pero ahora entre el 1 y el 12 en vez de entre el el 1 y el 50
+        miBoletoAux.append(boletoAux)
+    else:
+        print("Estrella no valida o repetida ")
+        
 
 
