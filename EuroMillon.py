@@ -58,7 +58,6 @@ for l1 in listaNums:
                     l1[cont]=" X"
                 cont+=1
 print("Los números que ha elegido se han borrado de su lista")
-
 # Volvemos a mostrar la lista de los números pero esta vez con las X añadidas
 for i in listaNums:
     print(*i)
@@ -75,5 +74,23 @@ while len(miBoletoAux)<2: #Le decimos que mientras la longitud de la lista "miBo
     else:
         print("Estrella no valida o repetida ")
         
+# Cambiamos las estrellas elegidas por X como anteriormente en los números.
+for e1 in listaEstrellas:
+    for estBoleto in miBoletoAux:
+            cont=0
+            for e in e1:
+                if(e1[cont]==estBoleto):
+                    e1[cont]="X"
+                cont+=1
+
+# Mostramos las estrellas con las X
+for i in listaEstrellas:
+    print(*i)
+        
+miBoletoAuxNum.sort() #Ordenamos la lista de los 5 numeros que hemos elegido
+miBoletoAux.sort() #Ordenamos la lista de las 2 estrellas que tenemos
+miBoleto=[miBoletoAuxNum]+[miBoletoAux]  #----->Lo que hacemos es juntar las dos listas para que se nos cree una misma lista que sera nuestro boleto para jugar en el sorteo
+
+print(f"El número que has elegido para participar en el sorteo es: {miBoleto}")
 
 
