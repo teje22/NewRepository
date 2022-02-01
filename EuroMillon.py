@@ -119,3 +119,34 @@ for num in miBoletoAux:
         if num==y:
             estrellas=estrellas+1
             
+print("Vamos a realizar el sorteo del numero premiado: ")
+
+print(f"El numero premiado es: {boletoGanador}")
+
+
+if aciertos==5 and estrellas==2:
+    print("1er premio enhorabuena has ganado 15.000.000€")
+elif aciertos==5 and estrellas==1:
+    print("2º premio enhorabuena has ganado 3.000.000€")
+elif aciertos==5 and estrellas==0:
+    print("3er premio enhorabuena has ganado 1.500.000€")
+elif aciertos==4 and estrellas==2:
+    print("4º premio enhorabuena has ganado 800.000€")
+elif aciertos==4 and estrellas==1:
+    print("5º premio enhorabuena has ganado 500.000€")
+elif aciertos==4 and estrellas==0:
+    print("6º premio enhorabuena has ganado 350.000€")
+elif aciertos==3 and estrellas==2:
+    print("7º premio enhorabuena has ganado 320.000€")
+elif aciertos==3 and estrellas==1:
+    print("8º premio enhorabuena has ganado 300.000€")
+elif aciertos==3 and estrellas==0:
+    print("9º premio enhorabuena has ganado 150.000€")
+elif aciertos==2 and estrellas==2:
+    print("10º premio enhorabuena has ganado 50.000€")
+elif aciertos==2 and estrellas==1:
+    print("11º premio enhorabuena has ganado 10.000€")
+elif aciertos==2 and estrellas==0:
+    print("12º premio enhorabuena has ganado 60€")
+else:
+    print("No has obtenido ningún premio, más suerte la proxima vez")
