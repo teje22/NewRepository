@@ -93,4 +93,17 @@ miBoleto=[miBoletoAuxNum]+[miBoletoAux]  #----->Lo que hacemos es juntar las dos
 
 print(f"El número que has elegido para participar en el sorteo es: {miBoleto}")
 
+while len(boletoGanadorNum)<5:
+    boletoRandom=random.randint(1, 50) #Creamos una variable en la que nos guarde un numero que se ha generado de forma aleatoria entre el 1 y el 50
+    if boletoRandom not in boletoGanadorNum and boletoRandom >=1 and boletoRandom <=50:
+        boletoGanadorNum.append(boletoRandom)
+        
+while len(boletoGanadorAux)<2:
+    boletoRandomAux=random.randint(1, 12)
+    if boletoRandomAux not in boletoGanadorAux and boletoRandomAux >=1 and boletoRandomAux <=12:
+        boletoGanadorAux.append(boletoRandomAux)
+      
+boletoGanadorNum.sort() #Ordenamos la lista de los 5 numeros que se han generado
+boletoGanadorAux.sort() #Ordenamos la lista de los 2 numeros que se han generado  
+boletoGanador=[boletoGanadorNum]+[boletoGanadorAux] #Jumtamos las dos listas para tener un boleto ganador
 
