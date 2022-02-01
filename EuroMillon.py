@@ -107,3 +107,15 @@ boletoGanadorNum.sort() #Ordenamos la lista de los 5 numeros que se han generado
 boletoGanadorAux.sort() #Ordenamos la lista de los 2 numeros que se han generado  
 boletoGanador=[boletoGanadorNum]+[boletoGanadorAux] #Jumtamos las dos listas para tener un boleto ganador
 
+# Creamos un bucle para averiguar cuantos números hemos acertado
+for num in miBoletoAuxNum:
+    for y in boletoGanadorNum:
+        if num==y:
+            aciertos=aciertos+1
+            
+# Hacemos el mismo bucle para averiguar las estrellas que coinciden en los boletos
+for num in miBoletoAux:
+    for y in boletoGanadorAux:
+        if num==y:
+            estrellas=estrellas+1
+            
