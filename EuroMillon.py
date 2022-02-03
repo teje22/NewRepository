@@ -16,7 +16,7 @@ listaNums=[[1,10,19,28,37,46],
            [9,18,27,36,45],
            ]
 
-listaestrellas=[[1,5,9],
+listaestrellitas=[[1,5,9],
                 [2,6,10],
                 [3,7,11],
                 [4,8,12],
@@ -64,7 +64,7 @@ for i in listaNums:
                 
             
 print("Vamos a elegir ahora las estrellitas")
-for i in listaestrellas:
+for i in listaestrellitas:
     print(*i)
 
 while len(miBoletoAux)<2: #Le decimos que mientras la longitud de la lista "miBoletoAux" sea menor que 5 nos pida nos pida otro numero
@@ -75,7 +75,7 @@ while len(miBoletoAux)<2: #Le decimos que mientras la longitud de la lista "miBo
         print("Estrella no valida o repetida ")
         
 # Cambiamos las estrellitas elegidas por X como anteriormente en los números.
-for e1 in listaestrellas:
+for e1 in listaestrellitas:
     for estBoleto in miBoletoAux:
             cont=0
             for e in e1:
@@ -84,7 +84,7 @@ for e1 in listaestrellas:
                 cont+=1
 
 # Mostramos las estrellitas con las X
-for i in listaestrellas:
+for i in listaestrellitas:
     print(*i)
         
 miBoletoAuxNum.sort() #Ordenamos la lista de los 5 numeros que hemos elegido
