@@ -16,7 +16,7 @@ listaNums=[[1,10,19,28,37,46],
            [9,18,27,36,45],
            ]
 
-listaEstrellas=[[1,5,9],
+listaestrellitas=[[1,5,9],
                 [2,6,10],
                 [3,7,11],
                 [4,8,12],
@@ -30,8 +30,8 @@ boletoGanadorNum=[]
 miBoleto=[]
 miBoletoAux=[]
 miBoletoAuxNum=[]
-aciertos=0
-estrellas=0
+numerillos=0
+estrellitas=0
 
 
 print("Bienvenidos al sorteo de la loteria del EuroMillon del 3 de Diciembre de 2021 ")
@@ -63,19 +63,19 @@ for i in listaNums:
     print(*i)
                 
             
-print("Vamos a elegir ahora las estrellas")
-for i in listaEstrellas:
+print("Vamos a elegir ahora las estrellitas")
+for i in listaestrellitas:
     print(*i)
 
 while len(miBoletoAux)<2: #Le decimos que mientras la longitud de la lista "miBoletoAux" sea menor que 5 nos pida nos pida otro numero
-    boletoAux=int(input("Elija 2 estrellitas: ")) #Creamos variable para que guarde las estrellas
+    boletoAux=int(input("Elija 2 estrellitas: ")) #Creamos variable para que guarde las estrellitas
     if boletoAux not in miBoletoAux and boletoAux >=1 and boletoAux <=12: #Le ponemos las condiciones igual que anteriormente pero ahora entre el 1 y el 12 en vez de entre el el 1 y el 50
         miBoletoAux.append(boletoAux)
     else:
         print("Estrella no valida o repetida ")
         
-# Cambiamos las estrellas elegidas por X como anteriormente en los números.
-for e1 in listaEstrellas:
+# Cambiamos las estrellitas elegidas por X como anteriormente en los números.
+for e1 in listaestrellitas:
     for estBoleto in miBoletoAux:
             cont=0
             for e in e1:
@@ -83,12 +83,12 @@ for e1 in listaEstrellas:
                     e1[cont]="X"
                 cont+=1
 
-# Mostramos las estrellas con las X
-for i in listaEstrellas:
+# Mostramos las estrellitas con las X
+for i in listaestrellitas:
     print(*i)
         
 miBoletoAuxNum.sort() #Ordenamos la lista de los 5 numeros que hemos elegido
-miBoletoAux.sort() #Ordenamos la lista de las 2 estrellas que tenemos
+miBoletoAux.sort() #Ordenamos la lista de las 2 estrellitas que tenemos
 miBoleto=[miBoletoAuxNum]+[miBoletoAux]  #----->Lo que hacemos es juntar las dos listas para que se nos cree una misma lista que sera nuestro boleto para jugar en el sorteo
 
 print(f"El número que has elegido para participar en el sorteo es: {miBoleto}")
@@ -111,42 +111,42 @@ boletoGanador=[boletoGanadorNum]+[boletoGanadorAux] #Jumtamos las dos listas par
 for num in miBoletoAuxNum:
     for y in boletoGanadorNum:
         if num==y:
-            aciertos=aciertos+1
+            numerillos=numerillos+1
             
-# Hacemos el mismo bucle para averiguar las estrellas que coinciden en los boletos
+# Hacemos el mismo bucle para averiguar las estrellitas que coinciden en los boletos
 for num in miBoletoAux:
     for y in boletoGanadorAux:
         if num==y:
-            estrellas=estrellas+1
+            estrellitas=estrellitas+1
             
 print("Vamos a realizar el sorteo del numero premiado: ")
 
 print(f"El numero premiado es: {boletoGanador}")
 
 
-if aciertos==5 and estrellas==2:
+if numerillos==5 and estrellitas==2:
     print("1er premio enhorabuena has ganado 15.000.000€")
-elif aciertos==5 and estrellas==1:
+elif numerillos==5 and estrellitas==1:
     print("2º premio enhorabuena has ganado 3.000.000€")
-elif aciertos==5 and estrellas==0:
+elif numerillos==5 and estrellitas==0:
     print("3er premio enhorabuena has ganado 1.500.000€")
-elif aciertos==4 and estrellas==2:
+elif numerillos==4 and estrellitas==2:
     print("4º premio enhorabuena has ganado 800.000€")
-elif aciertos==4 and estrellas==1:
+elif numerillos==4 and estrellitas==1:
     print("5º premio enhorabuena has ganado 500.000€")
-elif aciertos==4 and estrellas==0:
+elif numerillos==4 and estrellitas==0:
     print("6º premio enhorabuena has ganado 350.000€")
-elif aciertos==3 and estrellas==2:
+elif numerillos==3 and estrellitas==2:
     print("7º premio enhorabuena has ganado 320.000€")
-elif aciertos==3 and estrellas==1:
+elif numerillos==3 and estrellitas==1:
     print("8º premio enhorabuena has ganado 300.000€")
-elif aciertos==3 and estrellas==0:
+elif numerillos==3 and estrellitas==0:
     print("9º premio enhorabuena has ganado 150.000€")
-elif aciertos==2 and estrellas==2:
+elif numerillos==2 and estrellitas==2:
     print("10º premio enhorabuena has ganado 50.000€")
-elif aciertos==2 and estrellas==1:
+elif numerillos==2 and estrellitas==1:
     print("11º premio enhorabuena has ganado 10.000€")
-elif aciertos==2 and estrellas==0:
+elif numerillos==2 and estrellitas==0:
     print("12º premio enhorabuena has ganado 60€")
 else:
     print("No has obtenido ningún premio, más suerte la proxima vez")
